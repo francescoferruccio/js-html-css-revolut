@@ -27,6 +27,7 @@ a {
 }
 
 .navbar {
+  position: relative;
   width: 90%;
   display: flex;
   justify-content: space-between;
@@ -36,6 +37,11 @@ a {
   display: flex;
 }
 
+.hamburgerOpen {
+  width: 90%;
+  display: none;
+}
+
 .dropdown {
   position: absolute;
 }
@@ -43,4 +49,34 @@ a {
 .dropdown ul {
   display: flex;
   flex-direction: column;
+}
+
+.hamburgerMenu {
+  position: absolute;
+  top: 10px;
+  display: none;
+}
+
+.hamburgerMenu .dropdown {
+  position: relative;
+}
+
+.hamburgerMenu ul {
+  display: flex;
+  flex-direction: column;
+}
+
+@media screen and (max-width: 1080px) {
+  .navbar {
+    display: none;
+  }
+
+  .hamburgerOpen {
+    display: flex;
+    justify-content: flex-end;
+  }
+
+  .visible {
+    display: block;
+  }
 }

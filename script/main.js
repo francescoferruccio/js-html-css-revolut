@@ -11,3 +11,10 @@ $(document).ready(function() {
     }
   )
 });
+
+// funzione che al click sull'icona hamburger mostra o nasconde l'hamburger menu assegnandogli o togliendo la classe css "visible"
+$(".hamburgerOpen").click(
+  function() {
+    $(".hamburgerMenu").toggleClass("visible");
+  }
+);
