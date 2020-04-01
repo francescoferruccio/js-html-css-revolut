@@ -12,10 +12,17 @@ $(document).ready(function() {
   )
 });
 
-// funzione che al click sull'icona hamburger mostra o nasconde l'hamburger menu assegnandogli o togliendo la classe css "visible"
-$(".hamburgerOpen").click(
+// funzione che al click sull'icona hamburger mostra l'hamburger menu assegnandogli la classe css "visible"
+$(".fa-bars").click(
   function() {
-    $(".hamburgerMenu").toggleClass("visible");
+    $(".hamburgerMenu").addClass("visible");
+  }
+);
+
+// funzione che al click sull'icona di chiusura nasconde l'hamburger menu togliendo la classe css "visible"
+$(".fa-times").click(
+  function() {
+    $(".hamburgerMenu").removeClass("visible");
   }
 );
 
@@ -23,5 +30,12 @@ $(".hamburgerOpen").click(
 $(".hamburgerMenu li").click(
   function() {
     $(this).children(".dropdown").toggle();
+  }
+);
+
+// funziona che al click sui dropdown menu dell'hamburger cambia l'icona
+$(".hamburgerMenu li").click(
+  function() {
+    $(this).find("i").toggleClass("fa-chevron-down fa-chevron-up");
   }
 );

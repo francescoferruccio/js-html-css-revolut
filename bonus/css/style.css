@@ -79,6 +79,15 @@ a:hover {
   display: none;
 }
 
+.fa-bars {
+  color: grey;
+}
+
+.fa-bars:hover {
+  cursor: pointer;
+  color: #000;
+}
+
 .navbar .dropdown {
   position: absolute;
   box-shadow: 0px 0px 17px 4px rgba(0,0,0,0.1);
@@ -97,11 +106,13 @@ a:hover {
 
 .hamburgerMenu {
   position: absolute;
-  /* height: 100vh;
+  height: 100vh;
   width: 100vw;
-  background-color: #fff; */
-  top: 120px;
+  top: 0;
+  left: 0;
+  background-color: #fff;
   display: none;
+  padding-left: 30px;
 }
 
 .hamburgerMenu .dropdown {
@@ -114,7 +125,62 @@ a:hover {
   margin: 15px 0;
 }
 
+.hamburgerClose {
+  height: 70px;
+  display: flex;
+  justify-content: flex-end;
+  align-items: flex-end;
+}
+
+.fa-times {
+  color: grey;
+  margin-right: 50px;
+}
+
+.fa-times:hover {
+  cursor: pointer;
+  color: #000;
+}
+
+.hamburgerMenu li {
+  margin: 15px 0;
+  display: flex;
+  flex-direction: column;
+}
+
+.hamburgerTop {
+  width: 95%;
+  border-bottom: 1px solid lightgrey;
+}
+
+.hamburgerBottom {
+  width: 95%;
+}
+
+.fa-chevron-down {
+  font-size: 10px;
+  color: grey;
+}
+
+.fa-chevron-up {
+  font-size: 10px;
+  color: grey;
+}
+
+li:hover .fa-chevron-down {
+  color: #000;
+}
+
+.dropdown-title {
+  display: flex;
+  justify-content: space-between;
+}
+
 @media screen and (max-width: 1080px) {
+  header {
+    height: 100px;
+  }
+
   .navbar {
     display: none;
   }
