@@ -1,4 +1,5 @@
 $(document).ready(function() {
+  var hamburgerMenu = $(".hamburgerMenu");
   // salvo la selezione del dropdown menu in una variabile
   var dropdown = $(".dropdown");
   var dropdownFull = $(".dropdownFull");
@@ -16,29 +17,29 @@ $(document).ready(function() {
   // funziona che al mouse enter espande il dropdown menu versione desktop corrispondente e chiude gli altri eventualmente aperti
   $(".expandable").mouseenter(
     function() {
-      $(this).children(".dropdownFull").show();
-      $(".dropdownFull").not($(this).children()).hide();
+      $(this).children(dropdownFull).show();
+      $(dropdownFull).not($(this).children()).hide();
     }
   )
 
   // funzione che chiude tutti i dropdown versione desktop quando si clicca in qualsiasi punto della pagina
-  $("html").click(
+  $(document).click(
     function() {
-      $(".dropdownFull").hide();
+      dropdownFull.hide();
     }
   );
 
   // funzione che al click sull'icona hamburger mostra l'hamburger menu assegnandogli la classe css "visible"
   $(".fa-bars").click(
     function() {
-      $(".hamburgerMenu").addClass("visible");
+      hamburgerMenu.addClass("visible");
     }
   );
 
   // funzione che al click sull'icona di chiusura nasconde l'hamburger menu togliendo la classe css "visible"
   $(".fa-times").click(
     function() {
-      $(".hamburgerMenu").removeClass("visible");
+      hamburgerMenu.removeClass("visible");
     }
   );
 
