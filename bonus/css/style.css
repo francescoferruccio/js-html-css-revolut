@@ -93,19 +93,20 @@ a:hover {
   color: #000;
 }
 
-.navbar .dropdown {
+.dropdownFull {
   position: absolute;
+  margin-top: 15px;
   box-shadow: 0px 0px 17px 4px rgba(0,0,0,0.1);
   background-color: #fff;
   white-space: nowrap;
 }
 
-.dropdown ul {
+.dropdownFull ul {
   display: flex;
   flex-direction: column;
 }
 
-.dropdown li {
+.dropdownFull li {
   padding: 10px;
 }
 

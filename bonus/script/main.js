@@ -1,8 +1,10 @@
 $(document).ready(function() {
   // salvo la selezione del dropdown menu in una variabile
   var dropdown = $(".dropdown");
+  var dropdownFull = $(".dropdownFull");
   // setto tutti i dropdown nascosti di default
   dropdown.hide();
+  dropdownFull.hide();
 
   // imposto un evento che all'hover mi mostri i dropdown menu relativi al li su cui sono
   // $(".navbar li").hover(
@@ -14,15 +16,15 @@ $(document).ready(function() {
   // funziona che al mouse enter espande il dropdown menu corrispondente e chiude gli altri eventualmente aperti
   $(".expandable").mouseenter(
     function() {
-      $(this).children(".dropdown").show();
-      $(".dropdown").not($(this).children()).hide();
+      $(this).children(".dropdownFull").show();
+      $(".dropdownFull").not($(this).children()).hide();
     }
   )
 
   // funzione che chiude tutti i dropdown menu quando si clicca in qualsiasi punto della pagina
-  $(document).click(
+  $("html").click(
     function() {
-      $(".dropdown").hide();
+      $(".dropdownFull").hide();
     }
   );
 
