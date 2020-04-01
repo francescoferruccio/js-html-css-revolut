@@ -13,7 +13,7 @@ $(document).ready(function() {
   //   }
   // )
 
-  // funziona che al mouse enter espande il dropdown menu corrispondente e chiude gli altri eventualmente aperti
+  // funziona che al mouse enter espande il dropdown menu versione desktop corrispondente e chiude gli altri eventualmente aperti
   $(".expandable").mouseenter(
     function() {
       $(this).children(".dropdownFull").show();
@@ -21,7 +21,7 @@ $(document).ready(function() {
     }
   )
 
-  // funzione che chiude tutti i dropdown menu quando si clicca in qualsiasi punto della pagina
+  // funzione che chiude tutti i dropdown versione desktop quando si clicca in qualsiasi punto della pagina
   $("html").click(
     function() {
       $(".dropdownFull").hide();
