@@ -43,10 +43,11 @@ $(document).ready(function() {
     }
   );
 
-  // funzione che gestisce l'apertura dei dropdown menu in versione mobile al click invece che all'hover
+  // funzione che gestisce l'apertura dei dropdown menu uno alla volta in versione mobile
   $(".hamburgerMenu li").click(
     function() {
       $(this).children(".dropdown").toggle();
+      $(".dropdown").not($(this).children()).hide();
     }
   );
 
