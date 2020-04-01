@@ -15,7 +15,7 @@ $(document).ready(function() {
   // )
 
   // funziona che al mouse enter espande il dropdown menu versione desktop corrispondente e chiude gli altri eventualmente aperti
-  $(".expandable").mouseenter(
+  $(".navbar .expandable").mouseenter(
     function() {
       $(this).children(dropdownFull).show();
       $(dropdownFull).not($(this).children()).hide();
@@ -44,15 +44,15 @@ $(document).ready(function() {
   );
 
   // funzione che gestisce l'apertura dei dropdown menu uno alla volta in versione mobile
-  $(".hamburgerMenu li").click(
+  $(".hamburgerMenu .expandable").click(
     function() {
-      $(this).children(".dropdown").toggle();
-      $(".dropdown").not($(this).children()).hide();
+      $(this).children(".dropdown").slideToggle();
+      $(".dropdown").not($(this).children()).slideUp();
     }
   );
 
   // funziona che al click sui dropdown menu dell'hamburger cambia l'icona
-  $(".hamburgerMenu li").click(
+  $(".hamburgerMenu .expandable").click(
     function() {
       $(this).find("i").toggleClass("fa-chevron-down fa-chevron-up");
     }
