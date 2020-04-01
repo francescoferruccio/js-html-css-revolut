@@ -15,6 +15,7 @@ ul {
 li {
   list-style: none;
   margin: 10px;
+  position: relative;
 }
 a {
   text-decoration: none;
@@ -33,4 +34,13 @@ a {
 
 .nav-right {
   display: flex;
+}
+
+.dropdown {
+  position: absolute;
+}
+
+.dropdown ul {
+  display: flex;
+  flex-direction: column;
 }
