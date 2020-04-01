@@ -5,7 +5,7 @@ $(document).ready(function() {
   dropdown.hide();
 
   // imposto un evento che all'hover mi mostri i dropdown menu relativi al li su cui sono
-  $("li").hover(
+  $(".navbar li").hover(
     function() {
       $(this).children(".dropdown").toggle();
     }
@@ -16,5 +16,12 @@ $(document).ready(function() {
 $(".hamburgerOpen").click(
   function() {
     $(".hamburgerMenu").toggleClass("visible");
+  }
+);
+
+// funzione che gestisce l'apertura dei dropdown menu in versione mobile al click invece che all'hover
+$(".hamburgerMenu li").click(
+  function() {
+    $(this).children(".dropdown").toggle();
   }
 );

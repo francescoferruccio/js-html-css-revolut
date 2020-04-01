@@ -6,6 +6,8 @@
 
 header {
   display: flex;
+  height: 120px;
+  align-items: center;
 }
 
 ul {
@@ -14,12 +16,17 @@ ul {
 
 li {
   list-style: none;
-  margin: 10px;
+  margin: 0 10px;
   position: relative;
 }
 a {
   text-decoration: none;
   color: #000;
+}
+
+.wrapper {
+  max-width: 1300px;
+  margin: auto;
 }
 
 .logo {
@@ -31,10 +38,23 @@ a {
   width: 90%;
   display: flex;
   justify-content: space-between;
+  align-items: center;
 }
 
 .nav-right {
   display: flex;
+  align-items: center;
+}
+
+.btnGet {
+  background-color: #d2007e;
+  border-radius: 30px;
+  padding: 15px 20px;
+  color: #fff;
+}
+
+.btnGet:hover {
+  cursor: pointer;
 }
 
 .hamburgerOpen {
@@ -42,8 +62,10 @@ a {
   display: none;
 }
 
-.dropdown {
+.navbar .dropdown {
   position: absolute;
+  border: 1px solid #000;
+  background-color: #fff;
 }
 
 .dropdown ul {
@@ -51,9 +73,16 @@ a {
   flex-direction: column;
 }
 
+.dropdown li {
+  padding: 10px;
+}
+
 .hamburgerMenu {
   position: absolute;
-  top: 10px;
+  /* height: 100vh;
+  width: 100vw;
+  background-color: #fff; */
+  top: 120px;
   display: none;
 }
 
@@ -64,6 +93,7 @@ a {
 .hamburgerMenu ul {
   display: flex;
   flex-direction: column;
+  margin: 15px 0;
 }
 
 @media screen and (max-width: 1080px) {
