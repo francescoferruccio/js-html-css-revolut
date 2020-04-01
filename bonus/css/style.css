@@ -27,6 +27,10 @@ li {
   position: relative;
 }
 
+li:hover {
+  cursor: pointer;
+}
+
 a {
   text-decoration: none;
   color: grey;
@@ -65,6 +69,7 @@ a:hover {
 
 .btnGet {
   background-color: #d2007e;
+  width: 135px;
   border-radius: 30px;
   padding: 10px 25px;
   color: #fff;
@@ -150,11 +155,16 @@ a:hover {
 
 .hamburgerTop {
   width: 95%;
+  height: 15%;
   border-bottom: 1px solid lightgrey;
 }
 
 .hamburgerBottom {
   width: 95%;
+  height: 70%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
 }
 
 .fa-chevron-down {
@@ -174,6 +184,10 @@ li:hover .fa-chevron-down {
 .dropdown-title {
   display: flex;
   justify-content: space-between;
+}
+
+.hamburgerMenu .btnGet {
+  align-self: center;
 }
 
 @media screen and (max-width: 1080px) {
